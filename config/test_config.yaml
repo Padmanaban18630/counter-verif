@@ -1,0 +1,28 @@
+#=========================================================
+# Counter Verification Test Configuration
+#=========================================================
+
+defaults: &defaults
+  verbosity: MEDIUM
+  timeout_ns: 1000
+
+tests:
+  - name: test1
+    seed: 1
+    <<: *defaults
+
+  - name: test2
+    seed: 2
+    <<: *defaults
+
+  - name: test3
+    seed: 3
+    <<: *defaults
+    verbosity: HIGH
+
+  - name: test4
+    seed: 4
+    <<: *defaults
+    timeout_ns: 2000
+
+
